@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Developer | Suroj Nath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        #about-developer {
+            background: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            width: 100%;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1f3c88;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            width: 50%;
+            height: 4px;
+            background: #1f3c88;
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        .developer-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-wrapper {
+            position: relative;
+        }
+
+        .developer-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .developer-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .developer-info {
+            max-width: 450px;
+            text-align: left;
+        }
+
+        .developer-info h2 {
+            font-size: 1.8rem;
+            color: #1f3c88;
+            margin-bottom: 10px;
+        }
+
+        .developer-info p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Social Icons Styling */
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: #1f3c88;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #2a5298;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(31, 60, 136, 0.4);
+        }
+
+        .email-link {
+            display: block;
+            margin-bottom: 15px;
+            color: #1f3c88;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .email-link i {
+            margin-right: 8px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .developer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .developer-info {
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section id="about-developer">
+    <h1>About the Developer</h1>
+
+    <div class="developer-container">
+        <div class="image-wrapper">
+            <img src="dev.jpeg" alt="Suroj Nath">
+        </div>
+
+        <div class="developer-info">
+            <h2>Suroj Nath</h2>
+            <p>
+                I am a Computer Science & Engineering student at <strong>NIT Silchar</strong>. I'm passionate about coding, data structures, and crafting seamless user experiences in web development. 
+            </p>
+            
+            <a href="mailto:nathsuroj03@gmail.com" class="email-link">
+                <i class="fas fa-envelope"></i> nathsuroj03@gmail.com
+            </a>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/suroj03" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/suroj003" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:nathsuroj03@gmail.com" title="Email"><i class="fas fa-at"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

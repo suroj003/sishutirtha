@@ -1,0 +1,774 @@
+/* ===================================
+   GLOBAL STYLES & RESET
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   NAVIGATION BAR
+   =================================== */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    flex: 1;
+    min-width: 250px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+.hero {
+    background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)),
+                url('school-bg.jpg') center/cover no-repeat;
+    padding: 4rem 5%;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+}
+
+/* ===================================
+   SEARCH BAR
+   =================================== */
+.search {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.search input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.search i {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+/* ===================================
+   ABOUT SECTION - CONTAINER
+   =================================== */
+#about {
+    padding: 3rem 5%;
+    background: white;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* ===================================
+   ABOUT LEFT SECTION
+   =================================== */
+.about-left h2 {
+    color: #667eea;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #764ba2;
+    padding-left: 1rem;
+}
+
+.about-left p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-left h3 {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+/* Video Section */
+.video {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+}
+
+/* Director & Founder Images */
+.director,
+.found {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 1.5rem auto;
+    border: 5px solid #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.director:hover,
+.found:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   ABOUT RIGHT SECTION
+   =================================== */
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#bui,
+#gate {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#bui:hover,
+#gate:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+   NOTICE BOARD
+   =================================== */
+.notice-board {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.notice-board h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.notice-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.notice-list {
+    list-style: none;
+    animation: scroll 20s linear infinite;
+}
+
+.notice-list li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    border-left: 4px solid white;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.notice-container:hover .notice-list {
+    animation-play-state: paused;
+}
+
+/* ===================================
+   STUDENT'S CORNER
+   =================================== */
+.stdcrn {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    border: 2px solid #e0e0e0;
+}
+
+.stdcrn h3 {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.students {
+    list-style: none;
+}
+
+.students li {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.students li strong {
+    color: #667eea;
+    font-size: 1.1rem;
+}
+
+.students li span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.students li button {
+    align-self: flex-start;
+    padding: 0.5rem 1.5rem;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    color: #999;
+    cursor: not-allowed;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0.5rem;
+}
+
+/* ===================================
+   INFO ROW - ACHIEVEMENTS & GALLERY
+   =================================== */
+.info-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 5%;
+}
+
+.info-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+}
+
+#achievements h3,
+#gallery h3 {
+    color: #667eea;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#achievements p,
+#gallery p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+#achievements a,
+#gallery a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+#achievements a:hover,
+#gallery a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ===================================
+   ADMISSION BOX
+   =================================== */
+.admission-box {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 5%;
+}
+
+#admin {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+}
+
+.admi {
+    color: white;
+}
+
+.glow-text {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                     0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.admi a {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: white;
+    color: #f5576c;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admi a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===================================
+   SERVICES SECTION
+   =================================== */
+#services {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 5%;
+    margin: 3rem 0;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#services > p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#services ul {
+    max-width: 900px;
+    margin: 2rem auto;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+#services ul li {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid white;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+#services ul li:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(10px);
+}
+
+#services ul li::before {
+    content: '✓ ';
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* ===================================
+   HORIZONTAL RULE
+   =================================== */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #667eea, transparent);
+    margin: 3rem 5%;
+}
+
+/* ===================================
+   FOOTER - CONTACT SECTION
+   =================================== */
+#contact {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 5%;
+}
+
+.reach-us {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #667eea;
+}
+
+.info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===================================
+   DEVELOPER SECTION
+   =================================== */
+#dev {
+    text-align: center;
+    padding: 2rem 0;
+    background: #1a252f;
+    border-top: 2px solid #667eea;
+}
+
+#dev a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+#dev a:hover {
+    color: #764ba2;
+    transform: scale(1.05);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - TABLETS
+   =================================== */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .reach-us {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE
+   =================================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 3rem 3%;
+        min-height: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    #about {
+        padding: 2rem 3%;
+    }
+
+    .about-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .video iframe {
+        height: 250px;
+    }
+
+    .director,
+    .found {
+        width: 150px;
+        height: 150px;
+    }
+
+    #bui,
+    #gate {
+        height: 200px;
+    }
+
+    .info-row {
+        padding: 0 3%;
+        gap: 1.5rem;
+    }
+
+    .admission-box {
+        padding: 0 3%;
+    }
+
+    #admin {
+        padding: 2rem 1.5rem;
+    }
+
+    .glow-text {
+        font-size: 1.5rem;
+    }
+
+    .admi a {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    #services {
+        padding: 3rem 3%;
+    }
+
+    #services h2 {
+        font-size: 1.8rem;
+    }
+
+    #services ul {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #contact {
+        padding: 2rem 3%;
+    }
+
+    .search i {
+        right: 1.5rem;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - SMALL MOBILE
+   =================================== */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .about-left h2 {
+        font-size: 1.3rem;
+    }
+
+    .video iframe {
+        height: 200px;
+    }
+
+    .notice-container {
+        height: 200px;
+    }
+
+    .glow-text {
+        font-size: 1.3rem;
+    }
+
+    #services h2 {
+        font-size: 1.5rem;
+    }
+
+    .info h2 {
+        font-size: 1.5rem;
+    }
+
+    .map iframe {
+        height: 250px;
+    }
+}

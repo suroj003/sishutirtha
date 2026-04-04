@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Gallery | Sishu Tirtha High School</title>
+    <style>
+        /* ===================================
+           GLOBAL STYLES & RESET
+           =================================== */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        /* ===================================
+           MAIN HEADING
+           =================================== */
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 800;
+            color: #c0392b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, #c0392b, #e74c3c);
+            border-radius: 2px;
+        }
+
+        /* ===================================
+           SECTION HEADINGS
+           =================================== */
+        h2 {
+            color: #c0392b;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-left: 1rem;
+            border-left: 5px solid #e74c3c;
+        }
+
+        /* ===================================
+           PARAGRAPH STYLING
+           =================================== */
+        p {
+            letter-spacing: 0.5px;
+            color: #2c3e50;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        p strong {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #c0392b;
+            font-weight: 700;
+            text-decoration: none;
+            background: linear-gradient(135deg, #ffe5e5 0%, #ffd4d4 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===================================
+           GALLERY CONTAINER
+           =================================== */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 12px 35px rgba(192, 57, 43, 0.3);
+            border-color: #e74c3c;
+        }
+
+        /* ===================================
+           GOLDEN JUBILEE SECTION
+           =================================== */
+        .golden {
+            color: #c0392b;
+            font-weight: 800;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+        }
+
+        .golden::after {
+            content: '🎉';
+            display: block;
+            font-size: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .golden::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(to right, #f39c12, #e74c3c, #f39c12);
+            border-radius: 2px;
+        }
+
+        /* ===================================
+           HORIZONTAL RULES
+           =================================== */
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e74c3c, transparent);
+            margin: 3rem 0;
+        }
+
+        /* ===================================
+           LIGHTBOX EFFECT (OPTIONAL ENHANCEMENT)
+           =================================== */
+        .gallery-container img:active {
+            transform: scale(0.98);
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - TABLETS
+           =================================== */
+        @media (max-width: 1024px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .golden {
+                font-size: 2rem;
+            }
+
+            .gallery-container {
+                gap: 1.2rem;
+            }
+
+            .gallery-container img {
+                height: 300px;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - MOBILE
+           =================================== */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+                margin-bottom: 2rem;
+            }
+
+            h1::after {
+                width: 100px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin: 2rem 0 1rem 0;
+            }
+
+            .golden {
+                font-size: 1.8rem;
+                margin-top: 3rem;
+            }
+
+            .golden::before {
+                width: 150px;
+            }
+
+            p {
+                font-size: 1rem;
+                padding: 1.2rem 1.5rem;
+                letter-spacing: 0.3px;
+            }
+
+            .gallery-container {
+                gap: 1rem;
+            }
+
+            .gallery-container img {
+                height: 250px;
+            }
+
+            hr {
+                margin: 2rem 0;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - SMALL MOBILE
+           =================================== */
+        @media (max-width: 600px) {
+            body {
+                padding: 0.8rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                padding-left: 0.8rem;
+            }
+
+            .golden {
+                font-size: 1.5rem;
+            }
+
+            .golden::after {
+                font-size: 1.5rem;
+            }
+
+            p {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .gallery-container img {
+                height: auto;
+                min-height: 250px;
+            }
+        }
+
+        /* ===================================
+           ANIMATION ON LOAD
+           =================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-container img {
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .gallery-container img:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-container img:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-container img:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-container img:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-container img:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-container img:nth-child(6) { animation-delay: 0.6s; }
+        .gallery-container img:nth-child(7) { animation-delay: 0.7s; }
+        .gallery-container img:nth-child(8) { animation-delay: 0.8s; }
+        .gallery-container img:nth-child(9) { animation-delay: 0.9s; }
+        .gallery-container img:nth-child(10) { animation-delay: 1s; }
+
+        /* ===================================
+           PRINT STYLES
+           =================================== */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .gallery-container img {
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            .gallery-container img:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SCHOOL GALLERY</h1>
+
+    <h2>School Campus</h2>
+    <hr>
+    <div class="gallery-container">
+        <img src="gate.jpeg" alt="SCHOOL GATE">
+        <img src="build.jpeg" alt="SCHOOL BUILDING">
+    </div>
+
+    <hr style="margin-top: 30px;">
+
+    <h2 class="golden">GOLDEN JUBILEE</h2>
+    <p>
+        As part of celebrating our <strong>50 years of excellence</strong>, our school hosted a spectacular 
+        performance by the renowned <strong>Dohar Band from Kolkata</strong>. The event showcased the 
+        musical talent, energy, and cultural vibrancy of our school community, leaving students, staff, 
+        and visitors inspired and proud. 
+    </p>
+
+    <div class="gallery-container">
+        <img src="mla.jpeg" alt="Guest Event">
+        <img src="g1.jpeg" alt="Dohar Performance 1">
+        <img src="g2.jpeg" alt="Dohar Performance 2">
+        <img src="g3.jpeg" alt="Dohar Performance 3">
+        <img src="g4.jpeg" alt="Dohar Performance 4">
+        <img src="g5.jpeg" alt="Dohar Performance 5">
+        <img src="g6.jpeg" alt="Dohar Performance 6">
+        <img src="g7.jpeg" alt="Dohar Performance 7">
+        <img src="star.jpeg" alt="Special Guest">
+        <img src="audi.jpeg" alt="Audience View">
+    </div>
+
+</body>
+</html>

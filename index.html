@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://sths.schools.org</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+            const noticeList = document.getElementById("noticeList");
+
+            noticeList.addEventListener("mouseenter", () => {
+            noticeList.style.animationPlayState = "paused";
+            });
+
+            noticeList.addEventListener("mouseleave", () => {
+            noticeList.style.animationPlayState = "running";
+            });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <!--========================================================
+            Header tags and Information
+            ============================================================-->
+            <div class="logo">Sishu Tirtha High School Welcomes You!</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!--==============================================================
+        LOGO AND HEADING (NAMEPLATE)
+        ===================================================================-->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>SISHU TIRTHA HIGH SCHOOL</h1>
+                <p>PWD Road, Silchar-788001</p>
+            </div>
+        </section>
+    </header>
+    <!--======================================================================
+    ABOUT SECTION
+    =======================================================================-->
+    <section id="about">
+        <div class="search">
+            <input type="text" placeholder="Search Here"> 
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+        <div class="container">
+            <div class="about-left">
+        <h2>About the School</h2>
+        <p>Sishu Tirtha High School is an English-medium educational institution located on PWD Road, Silchar. 
+    Established on 16 April 1975 ( 2 BOISHAKH ), the school initially began as a Bengali-medium institution and was later upgraded to English medium to meet evolving educational needs. 
+    With a long-standing presence in the region, the school is recognized as one of the oldest private educational institutions in Silchar, committed to providing structured and value-based education.
+        </p>
+        <div class="video">
+            <iframe
+                src="https://www.youtube.com/embed/UconuTNuUNU"
+                  title="School Introduction"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        <h2>Director's Message</h2>
+        <img src="sec.jpeg" alt="Director" class="director">
+        <h3 style="color: blue;">MR. SAMAR BIJOY CHAKRABORTY</h3>
+        <p>At Sishu Tirtha High School, we recognize education as a cornerstone for cultivating responsible, competent, and principled individuals. In addition to academic excellence, the school upholds five core values that guide the conduct and character of our students: Punctuality, Honesty, Keeping One’s Word, Discipline, and Respect. Through a structured and supportive learning environment, we are committed to fostering students who demonstrate integrity, confidence, and the ability to contribute meaningfully to society.</p>
+        <h2>Founder</h2>
+        <img src="founder.jpeg" alt="founder" class="found">
+        <h3 style="color: blue;">Lt. MRINALINI BHATTACHARJEE</h3>
+        <p>Late Mrinalini Bhattacharjee was an independent and dedicated woman who envisioned education as a means to shape the future of children. With this belief, she established the institution in Silchar with the objective of providing quality education to the local community. The school was initially started at Silchar Sangeet Vidyalaya and was later shifted to its present location on PWD Road, Silchar, to support its growth and development</p>
+        </div>
+        <div class="about-right">
+            <img id="bui" src="build.jpeg" alt="School Building">
+            <img id="gate" src="gate.jpeg"  alt="School Gate">
+            <div class="notice-board">
+            <h3>📢 Notice Board</h3>
+
+            <div class="notice-container">
+                <ul class="notice-list" id="noticeList">
+                <li>Class resumption for the session of 2026-27</li>
+                <li>Golden Jubilee closing ceremony(16th April)</li>
+                <li>Science Exhibition on 29th April</li>
+                <li>Notice for collection of books from school library</li>
+                <li>Last date of submission of admission fee(15th April)</li>
+                <li>Celebration of Bengali New Year</li>
+                <li>Inter School Debate Competition</li>
+                <li>Class routine will be updated soon</li>
+                </ul>
+            </div>
+            <div class="stdcrn">
+                <h3>📘Student's Corner</h3>
+                <ul class="students" id="student">
+                    <li>
+                        <strong>Syllabus</strong>
+                        <span>:- Class-wise syllabus will be uploaded soon.</span>
+                        <button disabled>Coming Soon</button>
+                    </li>
+                    <li>
+                        <strong>PYQ'S</strong>
+                        <span>:- Class-wise previous year's questions will be available soon.</span>
+                        <button disabled>Coming Soon</button>
+                    </li>
+                    <li>
+                        <strong>Holiday List</strong>
+                        <span>:- Holiday List will be uploaded soon.</span>
+                        <button disabled>Coming Soon</button>
+                    </li>
+                    
+                </ul>
+            </div>
+
+</div>
+        </div>
+        </div>
+    </section> 
+    <!--======================================================
+    GALLERY & ACHIEVEMENT
+    ================================================================-->
+    <div class="info-row">
+  <div class="info-box">
+    <section id="achievements">
+        <h3>Our Achievements</h3>
+        <p>To know more about our school's achievements and alumni network.</p>
+        <a href="achievement.html" target="_blank">View Achievements</a>
+    </section>    
+  </div>
+
+  <div class="info-box">
+    <section id="gallery">
+        <h3>Photo Gallery</h3>
+        <p>Explore images of our school, campus & events. Our gallery represent vbrant culture of our school.</p>
+        <a href="gallery.html" target="_blank">View Gallery</a>
+    </section>    
+    </div>
+</div>  
+        <!--==========================================================
+        ONLLINE ADMISSION FORM
+        =============================================================-->
+        <div class="admission-box">
+            <section id="admin">
+                <div class="admi">
+                    <h2 class="glow-text">Online Admission Portal</h2>
+                    <a href="login.html" target="_blank">Click to open</a>
+                </div>
+            </section>
+        </div>    
+    </section>
+    <!--====================================================
+    SERVICES
+    ========================================================-->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>
+            The school provides quality educational services supported by a well-structured
+            infrastructure and essential facilities to ensure overall development of students.
+        </p>
+
+        <ul>
+            <li>Spacious, well-ventilated classrooms</li>
+            <li>Clean, safe, and disciplined campus environment</li>
+            <li>Well-equipped science and computer laboratories</li>
+            <li>Library with academic and reference books</li>
+            <li>Qualified and experienced teaching staff</li>
+            <li>Safe drinking water and proper sanitation facilities</li>
+            <li>Playground and sports facilities for physical development</li>
+            <li>Regular academic assessments and student guidance</li>
+        </ul>
+    </section>
+    <!--==============================================================
+    ==================================================================-->
+    <hr>
+    <!--=====================================================
+    CONTACT & FOOTER MAP
+    ==========================================================-->
+    <footer id="contact">
+        <section class="reach-us">
+  <div class="info">
+    <h2>How to Reach Us</h2>
+    <p>📍 PWD Road, Silchar – 788001 <br>
+    Dist: Cachar, Assam</p>
+    <p>📞 +91 XXXXXXXXXX</p>
+    <p>Email : sishutirtha1975@gmail.com</p>
+  </div>
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=Sishu+Tirtha+High+School,+Silchar&output=embed"
+      height="300"
+      style="border:0;"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+<!--=====================================================
+DEVELOPER'S PAGE
+===========================================================-->
+<section id="dev">
+    <a href="dev.html" target="_blank">About Developer</a>
+</section>
+    </footer>
+    <!--===========================================================
+    ===============================================================-->
+</body>
+</html>

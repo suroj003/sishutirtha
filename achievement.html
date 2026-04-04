@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR ACHIEVEMENTS</title>
+    <style>
+        /* ===================================
+           GLOBAL STYLES & RESET
+           =================================== */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fff5e1 0%, #ffeaa7 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ===================================
+           SECTION STYLING
+           =================================== */
+        section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===================================
+           HEADINGS
+           =================================== */
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e74c3c;
+            font-weight: 800;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #e74c3c, #3498db);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-weight: 700;
+            color: #3498db;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 2rem 0 1.5rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        /* ===================================
+           PARAGRAPHS
+           =================================== */
+        p {
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: #555;
+            text-align: justify;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        /* ===================================
+           IMAGES - RESULTS SECTION
+           =================================== */
+        .res {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            padding: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid #3498db;
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
+        }
+
+        /* ===================================
+           ALUMNI LIST
+           =================================== */
+        ul {
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #2c3e50;
+            list-style-type: none;
+            padding: 1rem 2rem;
+            margin: 1.5rem 0;
+        }
+
+        ul li {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border-left: 5px solid #27ae60;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        ul li::before {
+            content: '🎓';
+            position: absolute;
+            left: 1rem;
+            font-size: 1.3rem;
+        }
+
+        ul li:hover {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.2);
+        }
+
+        ul li strong {
+            color: #2980b9;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        /* ===================================
+           EMOJI STYLING
+           =================================== */
+        p::after {
+            display: inline-block;
+            margin-left: 0.3rem;
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - TABLETS
+           =================================== */
+        @media (max-width: 1024px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+            .res {
+                gap: 1.5rem;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - MOBILE
+           =================================== */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                padding: 0.8rem;
+            }
+
+            section {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+                letter-spacing: 0.3px;
+            }
+
+            .res {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 0.5rem;
+            }
+
+            img {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            ul {
+                padding: 1rem;
+            }
+
+            ul li {
+                padding: 1rem 1rem 1rem 2.5rem;
+                font-size: 0.95rem;
+            }
+
+            ul li::before {
+                left: 0.8rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - SMALL MOBILE
+           =================================== */
+        @media (max-width: 480px) {
+            body {
+                padding: 0.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            h2::after {
+                width: 70px;
+                height: 3px;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+                padding: 0.6rem;
+                margin: 1.5rem 0 1rem;
+            }
+
+            section {
+                padding: 1.2rem;
+                margin-bottom: 1.5rem;
+                border-radius: 10px;
+            }
+
+            p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            ul li {
+                padding: 0.9rem 0.9rem 0.9rem 2.3rem;
+                font-size: 0.9rem;
+            }
+
+            ul li strong {
+                font-size: 1rem;
+            }
+        }
+
+        /* ===================================
+           PRINT STYLES
+           =================================== */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            section {
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            section:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--===============================================================
+    ACHIEVEMENTS
+    ===================================================================-->
+    <section id="achievements">
+        <h2>OUR ACHIEVEMENTS</h2>
+        <p>Our school has a proud record of achievements in both academics and co-curricular activities. Over the years, students have won several inter-school cricket tournaments, excelled in march-past and parade competitions, and demonstrated discipline and teamwork through physical training (PT) events. These accomplishments reflect the school's commitment to holistic development, leadership, and sportsmanship. 🏆</p>
+    </section>
+
+    <!--==================================================================
+    OUR RESULTS
+    ======================================================================-->
+    <section id="result">
+        <h2>OUR RESULTS</h2>
+        <p>Our academic results reflect the dedication of our students, teachers, and the supportive learning environment of the school. Over the years, students have consistently performed well in board examinations, achieving excellent pass percentages and notable distinctions across subjects. These results stand as a testament to disciplined learning, strong fundamentals, and continuous academic guidance. 📘✨</p>
+        <h3>HSLC examinations results : </h3>
+        <div class="res">
+            <img src="res.jpeg" alt="2023 RESULTS">
+            <img src="res2.jpeg" alt="2025 RESULTS">
+        </div>
+    </section>
+
+    <!--=================================================================
+    ALUMINI NETWORK
+    ======================================================================-->
+    <section id="alumni">
+        <h2>NOTABLE ALUMINI</h2>
+        <p>Our Alumni Network connects former students who carry the values and legacy of our institution beyond the campus. It serves as a platform to share achievements, memories, guidance, and opportunities, strengthening the bond between past and present generations. 🌱</p>
+        <ul>
+            <li><strong>Kalika Prashad Bhattacharya</strong> - Renowned Bengali folk singer.</li>
+            <li><strong>Suroj Nath</strong> - CSE undergraduate at NIT Silchar, Frontend Developer.</li>
+        </ul>
+    </section>
+</body>
+</html>
