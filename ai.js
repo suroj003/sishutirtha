@@ -10,7 +10,18 @@ import cors from "cors";
 import 'dotenv/config';
 const app = express();
 app.use(cors());
+app.use(cors({
+  origin: ['https://suroj003.github.io', 'https://sishutirtha.onrender.com', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json());
+
+// Serve a dynamic config endpoint
+app.get('/config', (req, res) => {
+  res.json({ apiUrl: process.env.API_URL || 'http://localhost:3000' });
+});
 const schoolInfo=`SISHU TIRTHA HIGH SCHOOL - COMPLETE INFORMATION
 ================================================
 Name: Sishu Tirtha High School
