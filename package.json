@@ -1,0 +1,27 @@
+{
+  "name": "sths",
+  "version": "1.0.0",
+  "description": "🏫 Sishutirtha School Website\r Official website for Sishutirtha School. This site provides information about the school, events, admissions, and contact details for students and parents.\r 🌐 Live Website\r https://suroj003.github.io/sishutirtha/⁠�\r 📌 Features\r Home page with school introduction\r About School section\r Events & announcements\r Gallery\r Contact form\r About Developer section\r Responsive design (mobile friendly)\r 🛠️ Tech Stack\r HTML5\r CSS3\r JavaScript\r GitHub Pages (Deployment)\r 📂 Project Structure\r Copy code",
+  "homepage": "https://github.com/suroj003/sishutirtha#readme",
+  "bugs": {
+    "url": "https://github.com/suroj003/sishutirtha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suroj003/sishutirtha.git"
+  },
+  "license": "ISC",
+  "author": "suroj",
+  "type": "module",
+  "main": "ai.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/genai": "^2.6.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pdf-parse": "^2.4.5"
+  }
+}
