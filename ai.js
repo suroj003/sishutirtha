@@ -9,19 +9,15 @@ import express from "express";
 import cors from "cors";
 import 'dotenv/config';
 const app = express();
-app.use(cors());
 app.use(cors({
-  origin: ['https://suroj003.github.io', 'https://sishutirtha.onrender.com', 'http://localhost:3000'],
-  credentials: true,
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type']
+  origin: "*",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
 }));
 app.use(express.json());
 
 // Serve a dynamic config endpoint
-app.get('/config', (req, res) => {
-  res.json({ apiUrl: process.env.API_URL || 'http://localhost:3000' });
-});
+
 const schoolInfo=`SISHU TIRTHA HIGH SCHOOL - COMPLETE INFORMATION
 ================================================
 Name: Sishu Tirtha High School
@@ -277,8 +273,8 @@ app.get('/', (req, res) => {
 });
 
 // Start the server on Port 3000
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`🚀 Backend AI Server is running on http://localhost:${PORT}`);
-  console.log(`🌐 Frontend UI is running on http://127.0.0.1:5500/chat.html`);
+  console.log(`🚀 Backend AI Server is running on port ${PORT}`);
 });
