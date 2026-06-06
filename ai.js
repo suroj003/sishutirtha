@@ -101,12 +101,20 @@ Items provided by the school (no need to buy):
 - School Diary (every session)
 - Syllabus (class-wise, start of session)
 
+School Infrastructure
+==================
+- Spacious classrooms with proper ventilation and lighting
+- Computer Lab
+- 2 RCC type buildings with 2 floors each 
+- Seperate classrooms for MIL and Elective subjects
+- Playground for outdoor activities
+
 EXAMINATION PATTERN
 ===================
 4 examinations per year:
-1. Unit Test 1 (UT-1): 50 marks - Weightage in merit: 20%
+1. Unit Test 1 (UT-1): 50 marks - Weightage in merit: 10%
 2. Half Yearly (HF): 100 marks - Weightage in merit: 30%
-3. Unit Test 2 (UT-2): 50 marks - Weightage in merit: 20%
+3. Unit Test 2 (UT-2): 50 marks - Weightage in merit: 10%
 4. Annual Examination: 100 marks - Weightage in merit: 50%
 
 Merit is calculated on weighted percentage basis.
@@ -151,7 +159,7 @@ SUBJECTS: CLASS VIII TO X
 - Mathematics
 - Science (Physics, Chemistry, Biology as separate sections)
 - Social Science (History, Geography, Political Science, Economics)
-- Elective subject (Fine Arts / Advanced Maths / Geography / Computer Science)
+- Elective subject (Fine Arts / Advanced Maths / Geography / Computer Science / Music)
 
 Project work and assignments are given for ALL subjects during summer and winter vacations.
 Submission is mandatory.
@@ -232,7 +240,7 @@ Five core values: Punctuality, Honesty, Keeping One's Word, Discipline, Respect 
 NOTABLE ALUMNI
 ==============
 - Kalika Prashad Bhattacharya - Renowned Bengali folk singer
-- Suroj Nath - CSE student at NIT Silchar (Class of 2023), built the school's first official website
+- Suroj Nath - CSE student at NIT Silchar (Class of 2023), built the school's first official website, Data Scientist, Full Stack Developer who built this AI assistant and school website
 
 CONTACT AND OFFICE HOURS
 =========================
@@ -258,7 +266,7 @@ app.post("/ask", async (req, res) => {
         systemInstruction: `You are the official AI assistant for Sishu Tirtha High School, you have to reply or respond to queries asked by students parents or staff.
         You have the access to all school information ${schoolInfo}
         Reply politely and clearly if any student ask some academic questions solve his/her doubt with examples, if the user ask anything not related to studies or school you'll reply with a polite message indicating you can only with school-related and academic topics.
-        Always be helpful and give prescise reply and greet the user before starting communication. Remember you are being developed by Suroj Nath, an ex student of this school, so you can also give some information about him asked and don't give any hallucinated reply about him, always be honest and upto the mark correct. And be formal and respectful to all the users. School's reputation is in your hands. Thankyou.`,
+        Always be helpful and give prescise reply and greet the user before starting communication. Remember you are being developed by Suroj Nath, an ex student of this school, so you can also give some information about him asked and don't give any hallucinated reply about him, always be honest and upto the mark correct. And be formal and respectful to all the users. School's reputation is in your hands. Reply in your own tone don't copy paste instructions, Thankyou.`,
       },
     });
     res.json({ answer: response.text });
